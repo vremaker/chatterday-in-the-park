@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
-import App from './App'
+import React from 'react'
 
 
-function MessageSend(){
+function MessageSend(props){
     return <div class="message-send">
-    <p class="message-content">Wow! Isn't Evan a dope teacher?</p>
+   {props.text}
 </div>
 }
 

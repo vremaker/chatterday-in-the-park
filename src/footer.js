@@ -2,15 +2,20 @@ import React, {useState} from 'react';
 import App from './App'
 
 
-function Footer(){
+function Footer(props){
     const [text, setText] = useState('')
 
-    return <footer class="footer">
-    <input class="text-input" value={text} 
+    return <footer className="footer">
+    <input className="text-input" value={text} 
         onChange={e=>setText(e.target.value)}
         placeholder="Your Message"
     />
-    <button>send</button>
+    <button className="send-button"
+    onClick={()=>{props.onSend(text) 
+    setText('') }}
+    >send
+    </button>
+ 
   </footer>
 }
 
