@@ -1,15 +1,20 @@
 import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Footer from './footer'
+import Footer from './footer';
+import MessageSend from './message-send';
+import MessageRecieved from './message-recieved';
 
 function App() {
   return (
     <main class="main">
   <header>
-    <img src="https://cdn.freebiesupply.com/logos/large/2x/cool-logo-png-transparent.png" alt="logo" />
-    <span>Chat App</span>
+    <span>Chatty Patty </span>
   </header>
+  <div id="messages">
+    <MessageSend />
+    <MessageRecieved />
+  </div>
   <Footer />
 </main>
 
