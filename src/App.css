@@ -8,10 +8,9 @@ body {
 }
 
 footer {
-  position: absolute;
   bottom: 0; 
   width: 100%;
-  
+  position: sticky;
   padding:0;
   margin-bottom:1px;
 }
@@ -50,7 +49,6 @@ header {
   justify-content: center;
   align-items: center;
 }
-  
 
 
 .message-recieve {
@@ -87,40 +85,17 @@ header {
 }
 
 
-.message-recieve:after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 15px solid #A8DDFD;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  top: 0;
-  left: -15px;
-}
 
 
-
-.message-send:after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-bottom: 15px solid #f8e896;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  bottom: 0;
-  right: -15px;
-}
-
-
-#messages {
-  height: 90%;
+.messages {
+  position:relative;
+  max-height: 100%;
+  flex:1;
+  overflow-y: scroll;
+  background-color: pink;
   display: flex;
-  flex-flow: column; 
-  justify-content: flex-end;
-  align-items: baseline;
-  bottom:0;
+  flex-flow: column-reverse; 
+
 }
 
 
