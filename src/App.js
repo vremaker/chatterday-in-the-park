@@ -4,6 +4,7 @@ import Footer from './footer'
 import Message from './message'
 import {initialize, useDatu} from 'datu'
 import {BrowserRouter, Route} from 'react-router-dom'
+import NamePicker from './NamePicker'
 
 function App() {
   useEffect(()=>{
@@ -20,12 +21,10 @@ function Room(props) {
   const {messages, send} = useDatu(room)
   return (
     <main className="main">
-  
-      <header>
-        <img src="/gorrilla.jpg" alt="logo" />
-        <span>Chat App</span>
-      </header>
-
+    <header>
+     <img alt="logo" src={require('./logo.png')} alt="chatterday in the park" />
+     <NamePicker />
+    </header>
       <div className="messages">
         {messages.map((m,i)=> {
           return <Message key={i} text={m.text} />

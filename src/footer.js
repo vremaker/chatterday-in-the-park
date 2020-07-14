@@ -4,7 +4,9 @@ function Footer(props){
   const [text,setText] = useState('')
   
   return <footer className="footer">
-    <input className="text-input" value={text} 
+    <input
+      className="text-input" 
+      value={text} 
       onChange={e=> setText(e.target.value)}
       placeholder="Type your message here!"
       onKeyPress={e=> {
