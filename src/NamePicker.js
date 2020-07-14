@@ -19,9 +19,9 @@ function NamePicker(props){
           }
         }}
       />      
-        <button>   
-          <div classname={editName? "edit" : "done"}></div>
-        </button>
+      <>
+          <img onClick={editName ? editable: nonEditable } id="tiddy-togg" src={editName? require('./done.png') : require('./edit.png')} />
+     </>
      </div>
     
 }
