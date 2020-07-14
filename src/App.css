@@ -26,13 +26,13 @@ body{
 }
 header{
     height:60px;
-    border-bottom:1px solid white;
     width:100%;
     background:#f7e3c0;
-    display:flex;
+    display: flex;
     flex-flow: row nowrap;
-    align-items:space-between;
     align-items: center;
+    justify-content: space-between;
+    
 }
 
 
@@ -101,16 +101,26 @@ header img {
   border-radius: 15pt;
   height: 30px;
   text-align: left;
-}
+  pointer-events: all;}
 
 .view-user {
   background-color: #f7e3c0;
   border: none;
   text-align: right;
+  pointer-events: none;
 }
 
 #tiddy-togg {
   width: 20px;
   height: 20px;
   border: none;
+
+}
+
+#add-username {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  padding-right: 10px;
 }
