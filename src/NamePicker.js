@@ -8,8 +8,6 @@ function NamePicker(props){
   const editable = () => setEditName(false);
   const nonEditable = () => setEditName(true) ;
 
-
-
   return <div id="add-username">
       <input id="username" className={editName ? "edit-mode" : "view-user"}
         placeholder="your name here!"
@@ -21,11 +19,9 @@ function NamePicker(props){
           }
         }}
       />      
-    <>
-
-      <button onClick={editable}>On</button>
-      <button onClick={nonEditable}>Off</button>
-     </>
+        <button>   
+          <div classname={editName? "edit" : "done"}></div>
+        </button>
      </div>
     
 }
